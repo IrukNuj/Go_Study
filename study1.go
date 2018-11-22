@@ -12,6 +12,5 @@ func main()  {
 	for  i:= 0; i < pow ; i++ { //波括弧は必須
 		result *= num
 	}
-
 	fmt.Printf("%dの%d乗は%dです。¥n",num, pow, result)
 }
