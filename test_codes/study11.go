@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func later() func(string) string {
-	var store string
+	var store string // クロージャ内から参照されている変数
 	return func (next string) string {
 		s := store
 		store = next
