@@ -6,11 +6,12 @@ import (
 )
 
 
+func handler(w http.ResponseWriter, r *http.Request)  {
+	r.ParseForm()
+	fmt.Fprintf(w, "Hello!")
+}
+
 func main() {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request)  {
-	fmt.Fprintf(w, "Hello!")
 }
